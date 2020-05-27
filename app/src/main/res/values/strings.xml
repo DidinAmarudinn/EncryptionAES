@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EncryptionAndDecrytion(AES)</string>
+    <string name="dummy_text">There are many variations of passages</string>
+</resources>
