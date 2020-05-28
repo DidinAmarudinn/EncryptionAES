@@ -73,6 +73,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:maxLength="24"
+                                android:id="@+id/et_encryption"
                                 android:textColor="@color/textBlack"
                                 android:textSize="@dimen/_12sdp"></com.google.android.material.textfield.TextInputEditText>
                         </com.google.android.material.textfield.TextInputLayout>
@@ -85,6 +86,7 @@
                             android:layout_marginBottom="@dimen/_8sdp">
 
                             <Button
+                                android:id="@+id/btn_encrypt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/_35sdp"
                                 android:layout_alignParentRight="true"
@@ -96,6 +98,8 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/ll_sk"
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_8sdp"
@@ -121,6 +125,7 @@
                             android:padding="@dimen/_8sdp">
 
                             <TextView
+                                android:id="@+id/tv_seccretKey"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-light"
@@ -129,6 +134,7 @@
                                 android:textSize="@dimen/_10sdp" />
 
                             <ImageView
+                                android:id="@+id/copy_sk"
                                 android:layout_width="@dimen/_20sdp"
                                 android:layout_height="@dimen/_20sdp"
                                 android:layout_gravity="right"
@@ -140,6 +146,8 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/ll_iv"
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_8sdp"
@@ -147,6 +155,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+
                             android:layout_width="@dimen/_60sdp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/_4sdp"
@@ -165,6 +174,7 @@
                             android:padding="@dimen/_8sdp">
 
                             <TextView
+                                android:id="@+id/tv_IV"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-light"
@@ -173,6 +183,7 @@
                                 android:textSize="@dimen/_10sdp" />
 
                             <ImageView
+                                android:id="@+id/copy_iv"
                                 android:layout_width="@dimen/_20sdp"
                                 android:layout_height="@dimen/_20sdp"
                                 android:layout_gravity="right"
@@ -184,6 +195,8 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_hasil_encrypt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_8sdp"
@@ -209,6 +222,7 @@
                             android:padding="@dimen/_8sdp">
 
                             <TextView
+                                android:id="@+id/tv_hasil_encrypt"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-light"
@@ -217,6 +231,7 @@
                                 android:textSize="@dimen/_10sdp" />
 
                             <ImageView
+                                android:id="@+id/copy_encrypt"
                                 android:layout_width="@dimen/_20sdp"
                                 android:layout_height="@dimen/_20sdp"
                                 android:layout_gravity="right"
@@ -254,7 +269,7 @@
                         android:layout_marginRight="@dimen/_8sdp"
                         android:layout_marginBottom="@dimen/_8sdp"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Decryption"
+                        android:text="Decryption AES"
                         android:textColor="@color/textBlack"
                         android:textSize="@dimen/_14sdp" />
 
@@ -275,7 +290,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:maxLength="24"
+                            android:id="@+id/et_encryptext"
                             android:textColor="@color/textBlack"
                             android:textSize="@dimen/_11sdp"></com.google.android.material.textfield.TextInputEditText>
                     </com.google.android.material.textfield.TextInputLayout>
@@ -297,7 +312,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:maxLength="24"
+                            android:id="@+id/et_iv_text"
                             android:textColor="@color/textBlack"
                             android:textSize="@dimen/_11sdp"></com.google.android.material.textfield.TextInputEditText>
                     </com.google.android.material.textfield.TextInputLayout>
@@ -319,8 +334,8 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:maxLength="24"
                             android:textColor="@color/textBlack"
+                            android:id="@+id/et_seccret_text"
                             android:textSize="@dimen/_11sdp">
 
                         </com.google.android.material.textfield.TextInputEditText>
@@ -329,6 +344,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_8sdp"
                         android:layout_marginRight="@dimen/_8sdp">
 
                         <Button
@@ -337,10 +353,13 @@
                             android:layout_alignParentRight="true"
                             android:background="@drawable/button1"
                             android:text="Decrypt"
+                            android:id="@+id/btn_decrypt"
                             android:textColor="@color/textWhite" />
                     </RelativeLayout>
 
                     <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_hasil_decrypt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_8sdp"
@@ -354,14 +373,22 @@
                             android:text="Hasil Dekripsi"
                             android:textColor="@color/textBlack"
                             android:textSize="@dimen/_11sdp" />
-
-                        <TextView
+                        <RelativeLayout
+                            android:background="@drawable/border_view"
+                            android:padding="@dimen/_8sdp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
-                            android:text="@string/dummy_text"
-                            android:textColor="@color/textBlack"
-                            android:textSize="@dimen/_10sdp" />
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_hasil_decrypt"
+                                android:fontFamily="sans-serif-light"
+                                android:text="@string/dummy_text"
+                                android:textColor="@color/textBlack"
+                                android:textSize="@dimen/_11sdp" />
+                        </RelativeLayout>
+
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

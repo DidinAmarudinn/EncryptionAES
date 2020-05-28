@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Activitites.MainActivity">
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="220dp"
@@ -22,15 +21,17 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="116dp"
         android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
         android:text="Encryption And Decryption\n With AES"
         android:textColor="@android:color/black"
+        android:textStyle="bold"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,13 +42,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <Button
-            android:layout_width="@dimen/_100sdp"
+            android:layout_width="@dimen/_120sdp"
             android:layout_height="50dp"
             android:layout_marginLeft="24dp"
             android:layout_marginRight="12dp"
             android:background="@drawable/button1"
             android:fontFamily="sans-serif-medium"
-            android:text="Mulai"
+            android:text="Start"
             android:id="@+id/btn_mulai"
             android:textColor="@android:color/white" />
 
